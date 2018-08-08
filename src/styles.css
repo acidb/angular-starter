@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Mobiscroll Theme */
+
+.mbsc-mobiscroll.mbsc-page .app-header {
+    background: #4eccc4;
+    color: #fff;
+}
+
+
+/* iOS Theme */
+
+.mbsc-ios .app-header {
+    border-bottom: 1px solid #ccc;
+    background: #f7f7f7;
+    color: #000;
+}
+
+.mbsc-ios .app-header h1 {
+    font-size: 17px;
+}
+
+.mbsc-ios .app-tab {
+    padding-top: 42px;
+    padding-bottom: 56px;
+}
+
+.mbsc-ios .app-tab-home .mbsc-divider {
+    margin-bottom: -1px;
+}
+
+.mbsc-ios-dark .app-header {
+    background: #000;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Material Theme */
+
+.mbsc-material .app-header {
+    background: #009688;
+    color: #fff;
+}
+
+.mbsc-material .app-tab {
+    padding-bottom: 64px;
+}
+
+.mbsc-material-dark .app-header {
+    background: #81ccc4;
+}
+
+/* Windows Theme */
+
+.mbsc-windows .app-header {
+    background: #f8f8f8;
+    color: #000;
+    text-align: left;
+}
+
+.mbsc-windows-dark .app-header {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.mbsc-windows .app-tab {
+    padding-bottom: 64px;
+}
+
+.mbsc-windows .app-tab .mbsc-lv-cont .mbsc-lv .mbsc-lv-item {
+    padding-left: 4.375em;
+}
+
+.mbsc-windows .app-tab .mbsc-lv-cont .mbsc-lv .mbsc-checkbox-box {
+    left: 2.5em;
+}
+

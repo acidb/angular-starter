@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-page {
+    min-height: 100%;
+}
+
+.app-header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.app-header h1 {
+    margin: 0;
+    padding: 0 12px;
+    font-size: 20px;
+}
+
+.app-tab {
+    padding-top: 52px;
+    padding-bottom: 64px;
+}
