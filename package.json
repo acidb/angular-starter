@@ -20,7 +20,6 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@mobiscroll/angular": "https://npm.mobiscroll.com/@mobiscroll/angular-trial/-/angular-trial-4.2.4.tgz",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.1",
