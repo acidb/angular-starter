@@ -1,81 +1,8 @@
 <mbsc-page class="app-page">
-    <mbsc-bottom-nav>
-        <mbsc-nav-item [selected]="currentNav == 'home'" (click)="currentNav = 'home'" icon="home">Home</mbsc-nav-item>
-        <mbsc-nav-item [selected]="currentNav == 'settings'" (click)="currentNav = 'settings'" icon="cogs">Settings</mbsc-nav-item>
-        <mbsc-nav-item [selected]="currentNav == 'profile'" (click)="currentNav = 'profile'" icon="user4">Profile</mbsc-nav-item>
-    </mbsc-bottom-nav >
-    
-    <mbsc-form>
-        <div id="tab-home" class="app-tab app-tab-home" *ngIf="currentNav == 'home'" >
-            <div class="app-header">
-                <h1>Home</h1>
-            </div>
-            <mbsc-input [(ngModel)]="calendar" mbsc-calendar [mbsc-options]="calendarSettings">Date</mbsc-input>
-            <div class="mbsc-divider">Todo List</div>
-            <mbsc-listview [options]="listviewSettings" mbsc-enhance>
-                <mbsc-listview-item *ngFor="let item of data" data-id="{{item.id}}">
-                  {{item.todo}}
-                  <input type="checkbox">
-                </mbsc-listview-item>
-            </mbsc-listview>
-        </div>
-        <div id="tab-settings" class="app-tab" *ngIf="currentNav == 'settings'" >
-            <div class="app-header">
-                <h1>Settings</h1>
-            </div>
-            <div class="mbsc-form-group">
-                <div class="mbsc-form-group-title">Sound</div>
-                <mbsc-slider [(value)]="ring" icon="phone">Ring</mbsc-slider>
-                <mbsc-slider [(value)]="media" icon="music">Media</mbsc-slider>
-                <mbsc-slider [(value)]="alarm" icon="alarm2">Alarm</mbsc-slider>
-            </div>
-            <div class="mbsc-form-group">
-                <div class="mbsc-form-group-title">Notifications</div>
-                <mbsc-switch [(ngModel)]="enable"> Enable notifications
-                    <span class="mbsc-desc">Allow notifications on this device</span>
-                </mbsc-switch>
-                <mbsc-switch [(ngModel)]="message" [disabled]="!enable"> Message
-                    <span class="mbsc-desc">Get notifications when someone sends you a message</span>
-                </mbsc-switch>
-                <mbsc-switch [(ngModel)]="birthdays" [disabled]="!enable"> Birthdays
-                    <span class="mbsc-desc">Get notifications about your friends' birthdays</span>
-                </mbsc-switch>
-                <mbsc-switch [(ngModel)]="tags" [disabled]="!enable"> Tags
-                    <span class="mbsc-desc">Get notifications when you're tagged</span>
-                </mbsc-switch>
-            </div>
-            <div class="mbsc-form-group">
-                <div class="mbsc-form-group-title">Security</div>
-                <mbsc-input [(ngModel)]="numpad" mbsc-numpad [mbsc-options]="numpadSettings" type="password">Set PIN</mbsc-input>
-            </div>
-        </div>
-        <div id="tab-profile" class="app-tab" *ngIf="currentNav == 'profile'" >
-            <div class="app-header">
-                <h1>Profile</h1>
-            </div>
-            <div class="mbsc-form-group">
-                <div class="mbsc-form-group-title">Personal Data</div>
-                <mbsc-input value="Angelica">First Name</mbsc-input>
-                <mbsc-input value="Geary">Last Name</mbsc-input>
-                
-                <mbsc-input value="Geary">Last Name</mbsc-input>
-                
-                <mbsc-select [(ngModel)]="selectedLang" [data]="langData">Language</mbsc-select>
-    
-                <mbsc-input [(ngModel)]="date" mbsc-date [mbsc-options]="dateSettings">Birthday</mbsc-input>
-                <mbsc-segmented-group [(ngModel)]="segmented">
-                    <mbsc-segmented value="male">Male</mbsc-segmented>
-                    <mbsc-segmented value="female">Female</mbsc-segmented>
-                </mbsc-segmented-group>
-            </div>
-            <div class="mbsc-form-group">
-                <div class="mbsc-form-group-title">Account</div>
-                <mbsc-input type="email" value="angelica.geary@gmail.com">Email</mbsc-input>
-                <mbsc-input type="password" password-toggle="true">Password</mbsc-input>
-            </div>
-             <div class="mbsc-btn-group-block">
-                <mbsc-button>Save</mbsc-button>
-            </div>
-        </div>
-    </mbsc-form>
+  <router-outlet></router-outlet>
+  <mbsc-bottom-nav>
+    <mbsc-nav-item routerLink="home" icon="home">Home</mbsc-nav-item>
+    <mbsc-nav-item routerLink="settings" icon="cogs">Settings</mbsc-nav-item>
+    <mbsc-nav-item routerLink="profile" icon="user4">Profile</mbsc-nav-item>
+  </mbsc-bottom-nav>
 </mbsc-page>
