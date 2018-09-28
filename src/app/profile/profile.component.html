@@ -1,0 +1,28 @@
+<mbsc-form>
+  <div id="tab-profile" class="app-tab">
+    <div class="app-header">
+      <h1>Profile</h1>
+    </div>
+    <div class="mbsc-form-group">
+      <div class="mbsc-form-group-title">Personal Data</div>
+      <mbsc-input [(ngModel)]="firstName">First Name</mbsc-input>
+      <mbsc-input [(ngModel)]="lastName">Last Name</mbsc-input>
+
+      <mbsc-select [(ngModel)]="selectedLang" [data]="langData">Language</mbsc-select>
+
+      <mbsc-date [(ngModel)]="date" [options]="dateSettings">Birthday</mbsc-date>
+      <mbsc-segmented-group [(ngModel)]="segmented">
+        <mbsc-segmented value="male">Male</mbsc-segmented>
+        <mbsc-segmented value="female">Female</mbsc-segmented>
+      </mbsc-segmented-group>
+    </div>
+    <div class="mbsc-form-group">
+      <div class="mbsc-form-group-title">Account</div>
+      <mbsc-input type="email" [(ngModel)]="email">Email</mbsc-input>
+      <mbsc-input type="password" password-toggle="true" [(ngModel)]="password">Password</mbsc-input>
+    </div>
+    <div class="mbsc-btn-group-block">
+      <mbsc-button>Save</mbsc-button>
+    </div>
+  </div>
+</mbsc-form>

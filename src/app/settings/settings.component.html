@@ -1,0 +1,32 @@
+<mbsc-form>
+  <div id="tab-settings" class="app-tab">
+    <div class="app-header">
+      <h1>Settings</h1>
+    </div>
+    <div class="mbsc-form-group">
+      <div class="mbsc-form-group-title">Sound</div>
+      <mbsc-slider [(value)]="ring" icon="phone">Ring</mbsc-slider>
+      <mbsc-slider [(value)]="media" icon="music">Media</mbsc-slider>
+      <mbsc-slider [(value)]="alarm" icon="alarm2">Alarm</mbsc-slider>
+    </div>
+    <div class="mbsc-form-group">
+      <div class="mbsc-form-group-title">Notifications</div>
+      <mbsc-switch [(ngModel)]="enable"> Enable notifications
+        <span class="mbsc-desc">Allow notifications on this device</span>
+      </mbsc-switch>
+      <mbsc-switch [(ngModel)]="message" [disabled]="!enable"> Message
+        <span class="mbsc-desc">Get notifications when someone sends you a message</span>
+      </mbsc-switch>
+      <mbsc-switch [(ngModel)]="birthdays" [disabled]="!enable"> Birthdays
+        <span class="mbsc-desc">Get notifications about your friends' birthdays</span>
+      </mbsc-switch>
+      <mbsc-switch [(ngModel)]="tags" [disabled]="!enable"> Tags
+        <span class="mbsc-desc">Get notifications when you're tagged</span>
+      </mbsc-switch>
+    </div>
+    <div class="mbsc-form-group">
+      <div class="mbsc-form-group-title">Security</div>
+      <mbsc-numpad [(ngModel)]="numpad" [options]="numpadSettings" type="password">Set PIN</mbsc-numpad>
+    </div>
+  </div>
+</mbsc-form>
