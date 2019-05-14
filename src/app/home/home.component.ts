@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MbscListviewOptions } from '@mobiscroll/angular';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  now: Date = new Date();
   id = 4;
-  calendar: Date = this.now;
+  calendar = new Date();
   data = [{
     id: 1,
     todo: 'Do the laundry',
@@ -25,7 +25,7 @@ export class HomeComponent {
     todo: 'Need ketchup for pizza'
   }];
 
-  listviewSettings = {
+  listviewSettings: MbscListviewOptions = {
     sortable: {
       handle: 'left'
     },
@@ -55,5 +55,4 @@ export class HomeComponent {
       }]
     }
   };
-
 }

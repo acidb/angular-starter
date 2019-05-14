@@ -26,7 +26,6 @@ import { Router } from '@angular/router';
     BrowserAnimationsModule,
     JsonpModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

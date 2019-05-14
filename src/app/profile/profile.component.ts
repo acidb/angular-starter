@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MbscDatetimeOptions } from '@mobiscroll/angular';
 
 @Component({
   selector: 'app-profile',
@@ -6,24 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  now: Date = new Date();
+  now = new Date();
 
   firstName = 'Angelica';
   lastName = 'Geary';
   email = 'angelica.geary@gmail.com';
-  password = '';
+  password: string;
 
   selectedLang = 'en';
-  langData = [
-    { value: 'de', text: 'Deutsch' },
-    { value: 'en', text: 'English' },
-    { value: 'es', text: 'Español' },
-    { value: 'fr', text: 'Français' },
-    { value: 'it', text: 'Italiano' }
-  ];
+  langData = [{
+    value: 'de',
+    text: 'Deutsch'
+  }, {
+    value: 'en',
+    text: 'English'
+  }, {
+    value: 'es',
+    text: 'Español'
+  }, {
+    value: 'fr',
+    text: 'Français'
+  }, {
+    value: 'it',
+    text: 'Italiano'
+  }];
 
   date = new Date(1987, 2, 25);
-  dateSettings: any = {
+  dateSettings: MbscDatetimeOptions = {
     max: new Date(this.now.getFullYear() - 18, 11, 31)
   };
   segmented = 'female';
